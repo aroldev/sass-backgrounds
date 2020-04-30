@@ -1,0 +1,16 @@
+//---------- Background colours --------------
+// $backgrounds define 2 things: (starting-class-name, value)
+// If you need a black background you need to use the class: black-bg
+// If you need to use a colour background which is not here just add at the end of $background following the previous example.
+
+$backgrounds: (black, #000),
+				(white, #fff),
+				(primary, $primary),
+				(secondary, $secondary),
+				(light-grey, $light-grey) ;
+
+@each $id, $color in $backgrounds {
+	.#{$id}-bg {
+		background: $color;
+	}
+}
